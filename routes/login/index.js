@@ -23,4 +23,8 @@ const router = express.Router()
   })
   })
 
+  router.post('/', function (req, res) {
+   return res.send(req.body)
+  })
+
   module.exports = router
