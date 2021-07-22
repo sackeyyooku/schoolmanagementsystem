@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const CoursesController = require('./../../controllers/courses-controller');
 const router = express.Router()
 
 // middleware that is specific to this router
@@ -15,8 +16,6 @@ const router = express.Router()
 //     res.send('About birds')
 //   })
   
-  router.get('/', function (req, res) {
-    res.render('courses/index')
-  })
+  router.get('/', CoursesController.getCourses);
 
   module.exports = router

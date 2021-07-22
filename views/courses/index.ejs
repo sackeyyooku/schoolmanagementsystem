@@ -2,11 +2,23 @@
 <div>
 <%- include('../layout/sidebar'); %>
 
-    this is the courses page
-
-   <table>
-
-   </table>
+<table style="width:100%; border: 1px solid black">
+    <tr>
+        <th>
+            Firstname
+        </th>
+        <th>Lastname</th>
+        <th>Student ID</th>
+    </tr>
+    <% courses.forEach(function(course){ %>
+        <tr>
+            <td><%= course.firstname %></td>
+            <td><%= course.lastname %></td>
+            <td><%= course.student_id %></td>
+        </tr>
+    <% }); %>
+</table>
+  </ul>
 
 </div>
 <%- include('../layout/footer'); %>
