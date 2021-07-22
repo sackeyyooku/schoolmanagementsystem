@@ -9,46 +9,30 @@
     <title>Register</title>
 </head>
 <body>
+  
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
                 <form action="validation.php" class="sign-in-form">
-            <h2 class="title">sign in</h2>
+            <h2 class="title">Sign in</h2>
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="username" name="name1">
+                <input type="text" placeholder="User ID" name="name1">
             </div>
             <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="password" name="password1">
+                <input type="password" placeholder="Password" name="password1">
             </div>
             
                 <input type="submit" value="login" class="btn solid">
-            <p class="social-text">or sign-in with different platform</p>
-            <div class="social-media">
-                <a href="#" class="social-icon">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-
-
-
-
-            </div>
+            
+            
                 </form>
                 <form action="sign-up.php" method="POST" class="sign-up-form">
-                    <h2 class="title">sign up</h2>
+                    <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="username" name="name1">
+                        <input type="text" placeholder="User ID" name="name1">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
@@ -56,29 +40,11 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="password" name="password1">
+                        <input type="password" placeholder="Password" name="password1">
                     </div>
                     
                         <input type="submit" value="sign up" class="btn solid">
-                    <p class="social-text">or sign-up with different platform</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fa fa-facebook-official"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-        
-        
-        
-        
-                    </div>
+                   
                         </form>
             </div>
 
@@ -145,7 +111,7 @@ body,input{
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
-    background: linear-gradient(-45deg,#4481eb,#04befe);
+    background: linear-gradient(-45deg,violet,violet);
     top: -10%;
     right:48%;
     transform: translateY(-50%);
@@ -229,7 +195,7 @@ form.sign-up-form{
 
 }
 .input-field input::placeholder{
-    color: #aaa;
+    color: violet;
     font-weight: 500;
 }
 .btn{
@@ -239,7 +205,7 @@ form.sign-up-form{
     outline: none;
     border-radius: 49px;
     cursor: pointer;
-    background-color: #5995fd;
+    background-color: violet;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
@@ -276,8 +242,8 @@ form.sign-up-form{
 }
 
 .social-icon:hover{
-    color: #4481eb;
-    border-color: #4481eb;
+    color: violet;
+    border-color: violet;
 }
 .panels-container{
     position: absolute;
