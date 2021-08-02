@@ -5,15 +5,15 @@
 <table style="width:100%; border: 1px solid black">
     <tr>
         <th>
-            Firstname
+            Course_id
         </th>
-        <th>Lastname</th>
+        <th>COurse_name</th>
         <th>Student ID</th>
     </tr>
     <% courses.forEach(function(course){ %>
         <tr>
-            <td><%= course.firstname %></td>
-            <td><%= course.lastname %></td>
+            <td><%= course.course_id %></td>
+            <td><%= course.course_name %></td>
             <td><%= course.student_id %></td>
         </tr>
     <% }); %>

@@ -7,7 +7,10 @@ const connection = mysql.createConnection({
     user: process.env.DB_USER
 })
 
-connection.connect();
+connection.connect(function(err){
+    if (err) throw err;
+    console.log('Database is connected succesfully !')
+});
 
 // function getSession(){
 //     return connectio

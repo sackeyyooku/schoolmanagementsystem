@@ -4,7 +4,7 @@ class User {
 
     static getAllUsers() {
         return new Promise((resolve, reject) => {
-            connection.query('SELECT * FROM users', (err, rows, fields) => {
+            connection.query('SELECT * FROM user', (err, rows, fields) => {
                 if(err){
                     reject('Couldn\'t fetch results');
                     console.log(err.message)
