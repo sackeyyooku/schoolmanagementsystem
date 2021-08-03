@@ -1,19 +1,127 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </nav>
+
   <!-- sidebar -->
   <div class="col-md-12">
       <div class="col-md-4">
-          <nav class="nav flex-column">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </nav>
+        <nav id="sidebar">
+          <div class="sidebar-header">
+            <h3>Welcome!</h3>
+          </div>
+      
+          <ul class="list-unstyled components">
+            <li class="active">
+              <a href="/admin">Dashboard</a>
+            </li>
+            <li>
+              <a href="/courses/">Courses</a>
+            </li>
+            <li>
+              <a href="#menu">Grades</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8" style="margin: 10px 5px 5px 300px">
+
+
+       
+        <style>
+          /* ---------------------------------------------------
+      SIDEBAR STYLE
+  ----------------------------------------------------- */
+      
+  #sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 999;
+        background: #7386D5;
+        color: #fff !important;
+        transition: all 0.3s;
+      }
+      
+      #sidebar.active {
+        margin-left: -250px;
+      }
+      
+      #sidebar .sidebar-header {
+        padding: 20px;
+        background: #6d7fcc;
+      }
+      
+      #sidebar ul.components {
+        padding: 1px 0;
+        border-bottom: 1px solid #47748b;
+      }
+      
+      #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+      }
+      
+      #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+        color:white;
+      }
+      
+      #sidebar ul li a:hover {
+        color: #7386D5;
+        background: #fff;
+      }
+      
+      #sidebar ul li.active>a,
+      a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+      }
+      
+      a[data-toggle="collapse"] {
+        position: relative;
+      }
+      
+      a[aria-expanded="false"]::before,
+      a[aria-expanded="true"]::before {
+        content: '\e259';
+        display: block;
+        position: absolute;
+        right: 20px;
+        font-family: 'Glyphicons Halflings';
+        font-size: 0.6em;
+      }
+      
+      a[aria-expanded="true"]::before {
+        content: '\e260';
+      }
+      
+      ul ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #6d7fcc;
+      }
+      
+      ul.CTAs {
+        padding: 20px;
+      }
+      
+      ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+      
+      a.download {
+        background: #fff;
+        color: #7386D5;
+      }
+      
+      a.article,
+      a.article:hover {
+        background: #6d7fcc !important;
+        color: #fff !important;
+      }
+  </style>

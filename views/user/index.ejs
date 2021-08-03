@@ -1,0 +1,34 @@
+<% include('../layout/header');  %>
+<% include('../layout/sidebar') %>  
+<div>
+
+
+    <table style="width:100%; border: 1px solid black">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Username</th>
+            <th>user_id</th>
+            <th>contact</th>
+            <th>department</th>
+            <th>Date of Birth</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <% user.forEach(function(admin){ %>
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= user.lastname %></td>
+                <td><%= admin.username %></td>
+                <td><%= admin.user_id%></td>
+                <td><%= admin.contact%></td>
+                <td><%= admin.department_name%></td>
+                <td><%= admin.dob%></td>
+                <td><</td>
+                <td><</td>
+            </tr>
+        <% }); %>
+    </table>
+      </ul>
+    
+    </div>
