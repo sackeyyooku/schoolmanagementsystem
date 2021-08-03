@@ -16,3 +16,5 @@ res.render('student')
 );
 
   module.exports = router
+
+
