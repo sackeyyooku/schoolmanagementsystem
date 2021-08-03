@@ -4,7 +4,7 @@ class admin {
 
    static getAllAdmin(){
        return new Promise((resolve, reject) => {
-           connection.query('SELECT *  FROM user WHERE `role` = 1 ',(err,rows,fields) =>{
+           connection.query('SELECT *  FROM user ',(err,rows,fields) =>{
                if (err) {
                 reject('Couldn\'t fetch results');
                 console.log(err.message)
