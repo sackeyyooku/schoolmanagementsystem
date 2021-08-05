@@ -1,87 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body background="screenshot.png">
-      
-<div class="">
-    <div class="container">
-        <h1>Login</h1>
-        <div class="label">
-        <input type="radio" id="Admin" name="fav_language" value="Admin">
-                        <label for="Amin">Admin</label>
-                        <input type="radio" id="Lecturer" name="fav_language" value="Lecturer">
-                        <label for="Lecturer">Lecturer</label>
-                        <input type="radio" id="Student" name="fav_language" value="Student">
-                        <label for="Student">Student</label>
-        </div>         
 
-        <% if(typeof alert != 'undefined') { %>
-            <% alert.forEach(function(error) { %>
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <%= error.msg %>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                  </div>
-            <% }) %>
-        <% } %>
-
-        <form action="/login" method="POST">
-            <div class="form-group" id="border">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" name="username" id="username">
+    <div class="">
+        <div class="container">
+            <h1>Login</h1>
+            <div class="label">
+                <input type="radio" id="Admin" name="fav_language" value="Admin">
+                <label for="Admin">Admin</label>
+                <input type="radio" id="Lecturer" name="fav_language" value="Lecturer">
+                <label for="Lecturer">Lecturer</label>
+                <input type="radio" id="Student" name="fav_language" value="Student">
+                <label for="Student">Student</label>
             </div>
-            <div class="form-group" id="border">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password" id="password">
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
 
-<!-- Page content -->
+            <p>
+                <%=(typeof alertMsg!='undefined' )? alertMsg:''%>
+            </p>
 
-        
+            <form action="/login" method="POST">
+                <div class="form-group" id="border">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username" id="username">
+                </div>
+                <div class="form-group" id="border">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
 
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <!-- Page content -->
+
+
+
+        </div>
     </div>
-</div>
-    
-<style>
-
-.background{
-  background: url("screenshot.png");
-  background-size: 100%;
-  background-position: center;
-}
-         
-.container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width:600px ;
-  padding:50px;
-  background:#f9f9f9;
-  border:2px solid #333;
-}
-    
-   h1{
-       padding-bottom: 10px;
-       padding-top: 10px;
-   }
-
-   input[type="radio"]{
-  margin: 0 20px 0 20px;
-}
-
-    </style>
-
-
 </body>
+<style>
+    .background {
+        background: url("screenshot.png");
+        background-size: 100%;
+        background-position: center;
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        padding: 50px;
+        background: #f9f9f9;
+        border: 2px solid #333;
+    }
+
+    h1 {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    input[type="radio"] {
+        margin: 0 20px 0 20px;
+    }
+</style>
+
+
+
+
 </html>
