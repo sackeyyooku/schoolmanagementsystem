@@ -9,7 +9,7 @@ const authRouter = require('../routes/auth/auth')
 
 routes.use('/login', loginRouter)
 routes.use('/courses', coursesRouter)
-routes.use('/students', studentRouter)
+routes.use('/student', studentRouter)
 routes.use('/lectures', loginRouter)
 routes.use ('/admin',AdminRouter)
 routes.use('/auth' ,authRouter)
