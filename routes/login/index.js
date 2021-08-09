@@ -1,10 +1,10 @@
 const express = require('express')
-const passport = require('passport')
+//const passport = require('passport')
 const connection = require('../../database-connection')
 const router = express.Router()
-var bodyParser = require('body-parser')
-router.use( bodyParser.json() );       // to support JSON-encoded bodies
-router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+
+router.use( express.json() );       // to support JSON-encoded bodies
+router.use(express.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 // middleware that is specific to this router
@@ -29,20 +29,13 @@ router.get('/', function (req, res) {
   })
 })
 
-// router.post('',(req,res)=>{
-//   
-// })
 
-// router.post('/', passport.authenticate('local.js', {
-//   successRedirect: '/',
-//   failureRedirect: '/login',
-//   failureFlash: true
-// })
-// )
+
 
 
 router.post('/', function (req, res) {
-  //  const {username , password} = req.body;
+  
+  var usertype = req.body.usertype;
   var username = req.body.username;
   var password = req.body.password;
   
@@ -50,9 +43,23 @@ router.post('/', function (req, res) {
       if(err) throw err
       if(data.length>0){
          console.log(req.body)
+         if (usertype == 'Adminstrator'){
           res.redirect('/admin');
-      }else{
-          res.send("Wrong username or password");
+         }
+         else if (usertype == 'Student'){
+          res.redirect('/student');
+         }
+         else if (usertype == 'Lecturer'){
+          res.redirect('/Lecture');
+         }
+         if (!usertype) {
+           res.redirect('./login')
+          //Add the error message code later
+           
+         }
+                   
+      } else{
+          res.render('./login')
       }
       
   })
