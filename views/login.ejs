@@ -14,20 +14,21 @@
     <div class="">
         <div class="container">
             <h1>Login</h1>
-            <div class="label">
-                <input type="radio" id="Admin" name="fav_language" value="Admin">
-                <label for="Admin">Admin</label>
-                <input type="radio" id="Lecturer" name="fav_language" value="Lecturer">
-                <label for="Lecturer">Lecturer</label>
-                <input type="radio" id="Student" name="fav_language" value="Student">
-                <label for="Student">Student</label>
-            </div>
+           
 
             <p>
                 <%=(typeof alertMsg!='undefined' )? alertMsg:''%>
             </p>
 
             <form action="/login" method="POST">
+                <div class="label">
+                    <input type="radio" id="Adminstrator" name="usertype" value="Adminstrator">
+                    <label for="Admin">Admin</label>
+                    <input type="radio" id="Lecturer" name="usertype" value="Lecturer">
+                    <label for="Lecturer">Lecturer</label>
+                    <input type="radio" id="Student" name="usertype" value="Student">
+                    <label for="Student">Student</label>
+                </div>
                 <div class="form-group" id="border">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" name="username" id="username">
