@@ -60,7 +60,7 @@ PRIMARY KEY (`results changes`)) ENGINE = InnoDB;
 
 ALTER TABLE `lecturer_course` ADD CONSTRAINT `lecturer_fk` FOREIGN KEY (`user_id`) 
 REFERENCES `user`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
-
+ALTER TABLE `course` ADD UNIQUE(`course_id`);
 
 
 #INSERT STATEMENTS
