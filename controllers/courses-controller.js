@@ -1,3 +1,4 @@
+const connection = require('../database-connection');
 const CourseModel = require('./../models/course')
 class CoursesController {
 
@@ -17,6 +18,8 @@ class CoursesController {
             }
         );
     }
+
+   
 
 
 }

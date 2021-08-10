@@ -9,7 +9,7 @@
       </div>
       <table class="table table-stripped table-responsive table-bordered" style="width:100%; border: 1px solid black">
         <tr>
-          <!-- <th>#</th> -->
+          <!-- <th>SN</th> -->
           <th>Firstname</th>
           <th>Lastname</th>
           <th>Username</th>
@@ -48,9 +48,11 @@
             <td>
               <%= admin.dob%>
             </td>
+            
             <td>
-              <a href="#" type="button" class="btn btn-primary btn-small">
-                <i class="bi bi-pencil"></i>Edit</a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
+                Edit
+              </button>
             </td>
             <td>
               <a href="#" type="button" class="btn btn-danger btn-small">
@@ -62,3 +64,62 @@
 
   </div>
   <%- include('../layout/footer'); %>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Edit User Details</Details>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form role="form" method="POST" action="">
+              <input type="hidden" name="_token" value="">
+              <div class="form-group">
+                <label class="control-label">UserID</label>
+                <div>
+                  <input type="text" class="form-control input-lg" name="user_id" placeholder="Enter userID of details to be changed" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Firstname</label>
+                <div>
+                  <input type="text" class="form-control input-lg" name="Firstname" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Lastname</label>
+                <div>
+                  <input type="text" class="form-control input-lg" name="Lastname" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Role</label>
+                <div>
+                  <input type="text" class="form-control input-lg" name="role" value="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Contact</label>
+                <div>
+                  <input type="text" class="form-control input-lg" name="contact" value="">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div>
+                  <button type="submit" class="btn btn-success">Save changes</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% include('../layout/footer'); %>
