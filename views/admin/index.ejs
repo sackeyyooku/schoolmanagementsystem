@@ -7,6 +7,11 @@
         </button>
         Error. Unable to change results
       </div>
+     <div  style="margin: 0px 0px 0px 935px">
+      <button type="button" class=" btn btn-success  float-right"  data-bs-toggle="modal" data-bs-target="#addModal">
+        Add
+      </button>
+     </div>
       <table class="table table-stripped table-responsive table-bordered" style="width:100%; border: 1px solid black">
         <tr>
           <!-- <th>SN</th> -->
@@ -65,7 +70,7 @@
   </div>
   <%- include('../layout/footer'); %>
 
-    <!-- Modal -->
+    <!-- edit Modal -->
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -121,5 +126,68 @@
         </div>
       </div>
     </div>
+
+      <!-- addUser Modal -->
+      <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addModalLabel">Add New User Details</Details>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form role="form" method="POST" action="">
+                <input type="hidden" name="_token" value="">
+                <div class="form-group">
+                  <label class="control-label">UserID</label>
+                  <div>
+                    <input type="text" class="form-control input-lg" name="user_id" placeholder=" eg :userID : A32123 " value="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Firstname</label>
+                  <div>
+                    <input type="text" class="form-control input-lg" name="Firstname" value="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Lastname</label>
+                  <div>
+                    <input type="text" class="form-control input-lg" name="Lastname" value="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Role</label>
+                  <div>
+                    <input type="text" class="form-control input-lg" name="role" value="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Contact</label>
+                  <div>
+                    <input type="text" class="form-control input-lg" name="contact" value="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Date of Birth</label>
+                  <div>
+                    <input type="text" class="form-control input-lg" placeholder="2020-12-15" name="dob" value="">
+                  </div>
+                </div>
+  
+                <div class="form-group">
+                  <div>
+                    <button type="submit" class="btn btn-success">Add User</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <% include('../layout/footer'); %>
