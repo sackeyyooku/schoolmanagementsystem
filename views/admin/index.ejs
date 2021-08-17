@@ -75,29 +75,29 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="editModalLabel">Edit User Details</Details>
+            <h5 class="modal-title" id="editModalLabel">Edit User Details
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form role="form" method="POST" action="">
-              <input type="hidden" name="_token" value="">
+            <form role="form" method="POST" action="/admin">
+              <input type="hidden" name="formType" value="editform">
               <div class="form-group">
                 <label class="control-label">UserID</label>
                 <div>
-                  <input type="text" class="form-control input-lg" name="user_id" placeholder="Enter userID of details to be changed" value="">
+                  <input type="text" class="form-control input-lg" name="userID" placeholder="Enter userID of details to be changed" value="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label">Firstname</label>
                 <div>
-                  <input type="text" class="form-control input-lg" name="Firstname" value="">
+                  <input type="text" class="form-control input-lg" name="firstname" value="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label">Lastname</label>
                 <div>
-                  <input type="text" class="form-control input-lg" name="Lastname" value="">
+                  <input type="text" class="form-control input-lg" name="lastname" value="">
                 </div>
               </div>
               <div class="form-group">
@@ -137,30 +137,30 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form role="form" method="POST" action="">
-                <input type="hidden" name="_token" value="">
+              <form role="form" method="POST" action="/admin">
+                <input type="hidden" name="formType" value="addform">
                 <div class="form-group">
                   <label class="control-label">UserID</label>
                   <div>
-                    <input type="text" class="form-control input-lg" name="user_id" placeholder=" eg :userID : A32123 " value="">
+                    <input type="text" class="form-control input-lg" name="userID" placeholder=" eg :userID : A32123 " value="">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label">Firstname</label>
                   <div>
-                    <input type="text" class="form-control input-lg" name="Firstname" value="">
+                    <input type="text" class="form-control input-lg" name="firstname" value="">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label">Lastname</label>
                   <div>
-                    <input type="text" class="form-control input-lg" name="Lastname" value="">
+                    <input type="text" class="form-control input-lg" name="lastname" value="">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label">Role</label>
                   <div>
-                    <input type="text" class="form-control input-lg" name="role" value="">
+                    <input type="number" class="form-control input-lg" name="role" value="">
                   </div>
                 </div>
                 <div class="form-group">
@@ -191,3 +191,4 @@
       </div>
 
     <% include('../layout/footer'); %>
+   
