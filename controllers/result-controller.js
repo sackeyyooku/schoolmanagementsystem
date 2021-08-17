@@ -17,3 +17,5 @@ class resultController {
         )
     }
 }
+
+module.exports = resultController;
