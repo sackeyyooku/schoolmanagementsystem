@@ -1,8 +1,9 @@
 <%- include('../layout/header'); %>
-    <div >
+    <div>
         <%- include('../layout/sidebar'); %>
 
-            <table class="table table-stripped table-responsive table-bordered " style="width:100%; border: 1px solid black">
+            <table class="table table-stripped table-responsive table-bordered "
+                style="width:100%; border: 1px solid black">
                 <tr>
                     <th>Course_id</th>
                     <th>Course_name</th>
@@ -18,13 +19,48 @@
                             <%= course.course_name %>
                         </td>
                         <td>
-                            <%=  %> 
+                            <%= %>
                         </td>
-                        
+
                     </tr>
                     <% }); %>
             </table>
             </ul>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourse">
+                Add Course
+            </button>
+    </div>
+
+    <div class="modal fade" id="addCourse" tabindex="-1" aria-labelledby="addCourseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCourseModal">Add Course</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form role="form" method="POST" action="/courses">
+                        <input type="hidden" name="courseAddition" value="">
+                        <div class="form-group">
+                            <label class="control-label">Course ID</label>
+                            <input type="number" class="form-control input-lg" name="courseID" value="">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Course Name</label>
+                            <input type="text" class="form-control input-lg" name="courseName" value="">
+                        </div>
+                        <div class="form-group">
+                            <div class="text-right">
+                              <button type="submit" class="btn btn-primary " >Save changes</button>
+                            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close</button>
+                  </div>
+            </div>
+
+        </div>
 
     </div>
     <%- include('../layout/footer'); %>

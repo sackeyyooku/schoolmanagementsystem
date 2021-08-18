@@ -18,4 +18,9 @@ const router = express.Router()
   
   router.get('/', CoursesController.getCourses);
 
+
+  router.post('/',(req,res)=>{
+          console.log(req.body)                    
+  })
+
   module.exports = router
