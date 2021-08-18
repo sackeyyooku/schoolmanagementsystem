@@ -4,7 +4,7 @@ class admin {
 
     static getAllAdmin() {
         return new Promise((resolve, reject) => {
-            connection.query('SELECT *  FROM user INNER JOIN roletable ON roletable.id=user.role  ', (err, rows, fields) => {
+            connection.query('SELECT user.firstname,user.lastname,user.username,user.dob ,user.user_id,user.contact ,roletable.role , department.department_name FROM user INNER JOIN roletable ON roletable.id=user.role INNER JOIN department ON department.department_id = user.department ', (err, rows, fields) => {
                 if (err) {
                     reject('Couldn\'t fetch results');
                     console.log(err.message)
