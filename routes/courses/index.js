@@ -1,4 +1,5 @@
 const express = require('express');
+const connection = require('../../database-connection');
 const CoursesController = require('./../../controllers/courses-controller');
 const router = express.Router()
 
@@ -20,7 +21,10 @@ const router = express.Router()
 
 
   router.post('/',(req,res)=>{
-          console.log(req.body)                    
+          console.log(req.body) 
+          var courseID = req.body.courseID;
+          var courseName = req.body.courseName;
+          connection.query(`INSERT INTO course (course_id,course_name) VALUES (?,?)`,[courseID,courseName])                  
   })
 
   module.exports = router
