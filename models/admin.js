@@ -37,7 +37,7 @@ class admin {
         var role = req.body.role;
         var contact = req.body.contact;
         var userID = req.body.userID;
-        connection.query(`UPDATE 'user' SET firstname =?, lastname=? ,role =? AND contact= ? WHERE user_id= ?`, [firstname, lastname, role, contact, userID])
+        connection.query(`UPDATE 'user' SET firstname =?, lastname=? ,role =? , contact= ? WHERE user_id= ?`, [firstname, lastname, role, contact, userID])
     }
 }
 

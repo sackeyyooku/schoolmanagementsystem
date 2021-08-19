@@ -61,6 +61,10 @@ PRIMARY KEY (`results changes`)) ENGINE = InnoDB;
 ALTER TABLE `lecturer_course` ADD CONSTRAINT `lecturer_fk` FOREIGN KEY (`user_id`) 
 REFERENCES `user`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 ALTER TABLE `course` ADD UNIQUE(`course_id`);
+ALTER TABLE `user` ADD INDEX(`role`);
+ALTER TABLE `user` ADD CONSTRAINT `role_fk` FOREIGN KEY (`role`) REFERENCES `roletable`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `student_course` ADD FOREIGN KEY (`course_id`) REFERENCES `course`(`course_id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `user` ADD INDEX(`department`);
 
 
 #INSERT STATEMENTS
